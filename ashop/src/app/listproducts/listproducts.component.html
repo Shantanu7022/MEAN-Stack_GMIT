@@ -61,7 +61,7 @@
                         <td>{{c.catdata[0].categoryname}}</td>
                        <td>{{c.pname}}</td>
                        <td>{{c.pprice}}</td>
-                       <td>{{c.pd}}</td>
+                       <td [innerHtml]="c.pd"></td>
                        <td><img style="border-radius: 40%; height: 50px; width:100px" [src]="'http://localhost:2000/product_img/'+c.pimg"/></td>
                        <td><button (click)="delp(c._id)" class="btn btn-danger">Delete</button></td>
                        
