@@ -18,5 +18,8 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.2",
     "route": "^0.2.5"
+  },
+  "engines": {
+    "node": ">=14.20.1"
   }
 }
