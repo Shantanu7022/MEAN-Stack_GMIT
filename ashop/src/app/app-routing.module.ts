@@ -9,7 +9,7 @@ import { EditcatComponent } from './editcat/editcat.component';
 import { LoginComponent } from './login/login.component';
 import { ExpenseGuard } from './expense.guard';
 const routes: Routes = [
-  {path:"",component:DashboardComponent,canActivate: [ExpenseGuard]}, 
+  {path:"",component:DashboardComponent}, 
   {path:"add-category",component:AddCategoryComponent,canActivate: [ExpenseGuard]},
   {path: "list-category",component:ListcategoryComponent,canActivate: [ExpenseGuard]}, 
   {path: "add-product",component:AddproductComponent,canActivate: [ExpenseGuard]}, 
