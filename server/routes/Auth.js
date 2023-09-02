@@ -9,7 +9,7 @@ router.get("/reg",async (req,res)=>{
 
     var name=process.env.U_NAME;
     var email=process.env.A_EMAIL;
-    var pass=process.env.A_PASS;
+    var pass=process.env.A_PASSWORD;
 
    const salt=await bcrypt.genSalt(10);
    const hp=await bcrypt.hash(pass,salt);
