@@ -19,7 +19,7 @@ app.use(fu());
 
 
 const mongoose = require('mongoose');  //npm install mongoose
-mongoose.connect(process.env.DATABASE);
+mongoose.connect('mongodb+srv://shantanu:gayen123@cluster0.ajlgcxu.mongodb.net/gmitdb?retryWrites=true&w=majority');
 
 const cr=require("./routes/Category.js");
 const pr=require("./routes/Product");
