@@ -1,3 +1,4 @@
+require('dotenv').config();
 const exp=require("express"); 
 const bcrypt=require("bcrypt");  //npm install bcrypt
 const Admin=require("../model/Admin");
@@ -6,9 +7,9 @@ const router=exp.Router()
 
 router.get("/reg",async (req,res)=>{
 
-    var name="Shantanu";
-    var email="s@gmail.com";
-    var pass="1234";
+    var name=process.env.U_NAME;
+    var email=process.env.A_EMAIL;
+    var pass=process.env.A_PASS;
 
    const salt=await bcrypt.genSalt(10);
    const hp=await bcrypt.hash(pass,salt);
@@ -43,7 +44,7 @@ router.post("/login",async (req,res)=>{
                      aname:ldata.name
                  };
  
-                 var jtoken=jwt.sign(udata,"gmitkey");
+                 var jtoken=jwt.sign(udata, process.env.SECRET_KEY);
  
  
                  res.json({token:jtoken})
